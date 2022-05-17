@@ -16,29 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let __msAutoplay = setInterval(() => __msSlider.next(), __msTimer);
 
     //detect mouseenter event
-    __ms.onmouseenter = function (e) {
-        clearInterval(__msAutoplay);
-        console.log(e.type + ' mouse detected');
-    }
+    // __ms.onmouseenter = function (e) {
+    //     clearInterval(__msAutoplay);
+    //     console.log(e.type + ' mouse detected');
+    // }
 
-    //detect mouseleave event
-    __ms.onmouseleave = function (e) {
-        clearInterval(__msAutoplay);
-        __msAutoplay = setInterval(() => __msSlider.next(), __msTimer);
-        console.log(e.type + ' mouse detected');
-    }
+    // //detect mouseleave event
+    // __ms.onmouseleave = function (e) {
+    //     clearInterval(__msAutoplay);
+    //     __msAutoplay = setInterval(() => __msSlider.next(), __msTimer);
+    //     console.log(e.type + ' mouse detected');
+    // }
+    //
+    // //detect mouseclick event
+    // __ms.onclick = function (e) {
+    //     clearInterval(__msAutoplay);
+    //     console.log(e.type + ' mouse detected');
+    // }
 
-    //detect mouseclick event
-    __ms.onclick = function (e) {
-        clearInterval(__msAutoplay);
-        console.log(e.type + ' mouse detected');
-    }
-
-    //detect gesture tap event with hammer js library
-    hammer.on('tap', function (e) {
-        clearInterval(__msAutoplay);
-        console.log(e.type + ' gesture detected');
-    });
+    // //detect gesture tap event with hammer js library
+    // hammer.on('tap', function (e) {
+    //     clearInterval(__msAutoplay);
+    //     console.log(e.type + ' gesture detected');
+    // });
 
     //detect gesture swipe event with hammer js library
     hammer.on('swipe', function (e) {
