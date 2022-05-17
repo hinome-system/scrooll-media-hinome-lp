@@ -109,22 +109,22 @@ a:visited {
 
 @media screen and (max-width: 500px) {
     .micro-slider {
-        height: 232px;
+        height: 232px !important;
     }
 
     .micro-slider.fullwidth {
-        height: 200px;
+        height: 200px !important;
     }
 
     .micro-slider.fullwidth .slider-item {
-        height: 200px;
-        line-height: 200px;
+        height: 200px !important;
+        line-height: 200px !important;
     }
 
     .slider-item {
-        width: 320px;
-        height: 200px;
-        line-height: 200px;
+        width: 320px !important;
+        height: 200px !important;
+        line-height: 200px !important;
     }
 }
 
