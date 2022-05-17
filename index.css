@@ -77,13 +77,12 @@ a:visited {
 
 .micro-slider.fullwidth {
     height: 500px;
-    /* margin: 64px 0; */
 }
 
 .micro-slider.fullwidth .slider-item {
     height: 500px;
     line-height: 500px;
-    width: 100%
+    width: 100%;
 }
 
 .slider-wrapper {
@@ -99,13 +98,34 @@ a:visited {
     color: #FFF;
     display: none;
     font-size: 72px;
-    height: 500px;
-    line-height: 500px;
     left: 0;
     position: absolute;
     text-align: center;
     top: 0;
     width: 800px;
+    height: 500px;
+    line-height: 500px;
+}
+
+@media screen and (max-width: 500px) {
+    .micro-slider {
+        height: 286px;
+    }
+
+    .micro-slider.fullwidth {
+        height: 250px;
+    }
+
+    .micro-slider.fullwidth .slider-item {
+        height: 250px;
+        line-height: 250px;
+    }
+
+    .slider-item {
+        width: 400px;
+        height: 250px;
+        line-height: 250px;
+    }
 }
 
 /*
