@@ -2,18 +2,356 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-<script src="index.js"></script>
-<link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        @media screen and (max-width: 768px) {
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+            }
+
+            body {
+                background: #FFFFFF;
+                color: #212121;
+                font-family: 'Lato', sans-serif;
+                font-size: 12px;
+                min-height: 100%;
+                min-width: 320px;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+
+            a,
+            a:link,
+            a:visited {
+                color: #212121;
+                text-decoration: none;
+            }
+
+            .micro-slider {
+                /* margin: 10px 0; */
+                position: relative;
+                width: 100%;
+            }
+
+            .micro-slider.fullwidth .slider-item {
+                width: 100%;
+            }
+
+            .slider-wrapper {
+                overflow: hidden;
+                position: relative;
+                transform-style: preserve-3d;
+                transform-origin: 0 50%;
+            }
+
+            .slider-item {
+                background: #FFF;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .12);
+                color: #FFF;
+                display: none;
+                font-size: 72px;
+                left: 0;
+                position: absolute;
+                text-align: center;
+                top: 0;
+            }
+
+            /*
+            .slider-item:not(.active) {cursor: pointer;}
+            */
+            .indicators {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                padding: 0;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                list-style-type: none;
+                margin: 0 0 -36px 0;
+            }
+
+            .indicators li {
+                color: #fff;
+                float: left;
+                margin-right: 8px;
+                text-align: center;
+                height: 20px;
+                width: 20px;
+            }
+
+            .indicators li:last-child {
+                margin: 0;
+            }
+
+            .indicators a {
+                background: #FFF;
+                border-radius: 100px;
+                border: 1px solid #E6E9EC;
+                color: #FFF;
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+            }
+
+            .indicators .active a {
+                background-image: url("cover.png");
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .s1 {
+                border-radius: 8px;
+            }
+
+            .s2 {
+                border-radius: 8px;
+            }
+
+            .s3 {
+                border-radius: 8px;
+            }
+
+            .s4 {
+                border-radius: 8px;
+            }
+
+            .s5 {
+                border-radius: 8px;
+            }
+
+
+            .micro-slider {
+                height: 232px;
+            }
+
+            .micro-slider.fullwidth {
+                height: 200px;
+            }
+
+            .micro-slider.fullwidth .slider-item {
+                height: 200px;
+                line-height: 200px;
+            }
+
+            .slider-item {
+                width: 320px;
+                height: 200px;
+                line-height: 200px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+            }
+
+            body {
+                background: #FFFFFF;
+                color: #212121;
+                font-family: 'Lato', sans-serif;
+                font-size: 12px;
+                min-height: 100%;
+                min-width: 320px;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+
+            .section-header {
+                display: block;
+                margin-top: 20px;
+                position: relative;
+                text-align: center;
+            }
+
+            .section-header h1 {
+                color: #212121;
+                display: inline-block;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 36px;
+                padding: 0 0 24px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .section-header h1:after {
+                position: absolute;
+                display: block;
+                width: auto;
+                height: 3px;
+                bottom: 0;
+                left: 20%;
+                right: 20%;
+                border-radius: 1px;
+                content: "";
+                z-index: 1;
+                background: #e6e9ec;
+            }
+
+            section {
+                padding-bottom: 30px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            a,
+            a:link,
+            a:visited {
+                color: #212121;
+                text-decoration: none;
+            }
+
+            .micro-slider {
+                /* margin: 10px 0; */
+                position: relative;
+                width: 100%;
+            }
+
+            .micro-slider.fullwidth .slider-item {
+                width: 100%;
+            }
+
+            .slider-wrapper {
+                overflow: hidden;
+                position: relative;
+                transform-style: preserve-3d;
+                transform-origin: 0 50%;
+            }
+
+            .slider-item {
+                background: #FFF;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .12);
+                color: #FFF;
+                display: none;
+                font-size: 72px;
+                left: 0;
+                position: absolute;
+                text-align: center;
+                top: 0;
+            }
+
+            /*
+            .slider-item:not(.active) {cursor: pointer;}
+            */
+            .indicators {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                padding: 0;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                list-style-type: none;
+                margin: 0 0 -36px 0;
+            }
+
+            .indicators li {
+                color: #fff;
+                float: left;
+                margin-right: 8px;
+                text-align: center;
+                height: 20px;
+                width: 20px;
+            }
+
+            .indicators li:last-child {
+                margin: 0;
+            }
+
+            .indicators a {
+                background: #FFF;
+                border-radius: 100px;
+                border: 1px solid #E6E9EC;
+                color: #FFF;
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+            }
+
+            .indicators .active a {
+                background-image: url("cover.png");
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .s1 {
+                border-radius: 8px;
+            }
+
+            .s2 {
+                border-radius: 8px;
+            }
+
+            .s3 {
+                border-radius: 8px;
+            }
+
+            .s4 {
+                border-radius: 8px;
+            }
+
+            .s5 {
+                border-radius: 8px;
+            }
+
+            .micro-slider {
+                height: 536px;
+            }
+
+            .micro-slider.fullwidth {
+                height: 500px;
+            }
+
+            .micro-slider.fullwidth .slider-item {
+                height: 500px;
+                line-height: 500px;
+            }
+
+            .slider-item {
+                width: 800px;
+                height: 500px;
+                line-height: 500px;
+            }
+        }
+    </style>
 </head>
 <body id="micro-slider">
-    <div class="micro-slider">
-        <img class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_0_set.png" alt="image_1_set.png">
-        <img class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_2_set.png" alt="image_2_set.png">
-        <img  class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_3_set.png" alt="image_3_set.png">
-        <img  class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_4_set.png" alt="image_4_set.png">
-        <img  class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_5_set.png" alt="image_5_set.png">
-    </div>
+<div class="micro-slider">
+    <img class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_0_set.png"
+         alt="image_1_set.png">
+    <img class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_2_set.png"
+         alt="image_2_set.png">
+    <img class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_3_set.png"
+         alt="image_3_set.png">
+    <img class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_4_set.png"
+         alt="image_4_set.png">
+    <img class="slider-item s1" src="https://storage.googleapis.com/prd-landingpage-contents/image_5_set.png"
+         alt="image_5_set.png">
+</div>
 </body>
 </html>
