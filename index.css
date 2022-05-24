@@ -142,46 +142,26 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-
     .s1 {
         border-radius: 8px;
-        background-image: url("image_1_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s2 {
         border-radius: 8px;
-        background-image: url("image_2_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s3 {
         border-radius: 8px;
-        background-image: url("image_3_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s4 {
         border-radius: 8px;
-        background-image: url("image_4_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s5 {
         border-radius: 8px;
-        background-image: url("image_5_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
+
 
     .micro-slider {
         height: 232px;
@@ -350,42 +330,22 @@
 
     .s1 {
         border-radius: 8px;
-        background-image: url("image_1_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s2 {
         border-radius: 8px;
-        background-image: url("image_2_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s3 {
         border-radius: 8px;
-        background-image: url("image_3_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s4 {
         border-radius: 8px;
-        background-image: url("image_4_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .s5 {
         border-radius: 8px;
-        background-image: url("image_5_set.png");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .micro-slider {
